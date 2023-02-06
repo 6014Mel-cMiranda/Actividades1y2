@@ -1,0 +1,134 @@
+// Por Mel-c Miranda
+//DESCRIPCION: CARRO
+void setup(){
+size(700,700);
+
+background(0);
+}
+void draw(){
+stroke(255);
+fill(22,216,137);
+rect(250,250,300,100);
+fill(101,20,103);
+ellipse(300,340,90,90);
+fill(101,20,103);
+ellipse(500,340,90,90);
+fill(157,229,65);
+rect(325,150,150,100);
+}
+
+
+//Por Mel-c Miranda C.
+//30/01/2023
+//Computadora
+void setup(){
+  size(500,500);
+  background(245,245,245);
+}
+
+void draw(){
+  //el de atras
+  fill(44,43,46);
+ rect(70,70,250,150);
+ //el de adelante
+ //el penultimo es anchura
+ //el ultimo numero es altura
+ fill(180,184,255);
+rect(90,90,200,100);
+
+fill(130,130,137);
+ellipse(180,280,90,30);
+fill(129,129,129);
+rect(160,220,50,60);
+rect(100,320,200,50);  
+
+
+
+// Por Mel-c MIRANDA
+//FECHA: 3/02/2023
+//DESCRIPCION: Carro en Movimiento
+//declaracion de variables
+float ang;
+float x;
+float y;
+float speed;
+
+void setup(){
+size(1200,400);
+//posicion del objeto si se mueve a los lados
+x=10;
+// posicion del objeto si arriba o abajo
+y=150;
+//velocidad a la que se mueve el objeto
+speed=2;
+}
+
+void draw(){
+background(105,222,125);
+stroke(5); //bordes color negro.
+strokeWeight(2);//grosor de borde 
+fill(73,80,75);//color gris para el pavimento.
+rect(1,100,width,200);//dibujo la calle.
+ 
+ carro();
+ // es si X es igual a velocidad
+ //esto hace que se pueda mover el objeto al mismo tiempo que la velocidad
+  x+=speed;
+  ang+=(speed+2);
+} 
+
+void carro(){
+beginShape();
+//Azul carro
+fill(67,191,255);
+rect(x,y,300,100,60);
+endShape();
+ 
+beginShape(); 
+//llanta trasera
+fill(0);
+ellipse(x+60,y+90,90,90);
+endShape();
+
+beginShape(); 
+//llanta delantera
+fill(0);
+ellipse(x+240,y+90,90,90);
+endShape();
+
+beginShape();
+//carpa carro
+fill(67,191,255);
+rect(x+50,y-100,200,100,5);
+endShape();
+
+beginShape();
+//Ventana carro
+fill(212,235,247);
+rect(x+160,y-90,70,70,10);
+endShape();
+
+beginShape();
+//linea carro
+fill(67,191,255);
+rect(x+50,y-100,100,100,5);
+endShape();
+
+beginShape();
+//Ventana carro trasera
+fill(212,235,247);
+rect(x+70,y-90,70,70,10);
+endShape();
+
+beginShape(); 
+//llanta blanca delantera
+fill(252);
+ellipse(x+240,y+90,30,30);
+endShape();
+
+beginShape(); 
+//llanta trasera
+fill(252);
+ellipse(x+60,y+90,30,30);
+endShape();
+}
